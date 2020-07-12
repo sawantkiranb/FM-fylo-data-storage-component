@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
 
 * {
   padding: 0;
@@ -9,4 +9,149 @@
 :root {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+  color: #fff;
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/bg-mobile.png"), hsl(229, 57%, 11%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.upper {
+  width: 335px;
+  height: 200px;
+  background: hsl(228, 56%, 26%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 6pc;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -150%);
+  padding: 40px;
+}
+
+.two {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 35px;
+}
+
+.action {
+  width: 55px;
+  height: 55px;
+  background: hsl(229, 57%, 11%);
+  margin-right: 15px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.action svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lower {
+  width: 335px;
+  height: 175px;
+  background: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -45%);
+}
+
+.header {
+  width: 55%;
+  height: 95px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  border-radius: 12px;
+  transform: translate(-50%, 40%);
+  z-index: 1;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 9px;
+  color: #000;
+}
+
+.header p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #adadad;
+}
+
+.lower {
+  text-align: center;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 6%;
+}
+
+span {
+  font-weight: 700;
+}
+
+.progressbar {
+  width: 80%;
+  height: 12px;
+  background: hsl(229, 57%, 11%);
+  margin: 17px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progressbar::after {
+  content: "";
+  width: 75%;
+  height: 9px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  position: absolute;
+  border-radius: 10px;
+  transform: translate(-66%, 15%);
+  left: 50%;
+}
+
+.progress-end {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translateY(1px);
+  position: absolute;
+  left: 72%;
+  z-index: 1;
 }
