@@ -166,6 +166,13 @@ span {
   display: inline;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 @media screen and (min-width: 1440px) {
   .container {
     background: url("./images/bg-desktop.png"), hsl(229, 57%, 11%);
@@ -204,7 +211,7 @@ span {
 
   .header::after {
     content: "";
-    transform: translate(1px,40px);
+    transform: translate(1px, 40px);
     width: 0;
     height: 0;
     border-top: 30px solid #fff;
