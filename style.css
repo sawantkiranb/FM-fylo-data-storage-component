@@ -12,12 +12,6 @@
   color: #fff;
 }
 
-.attribution {
-  position: absolute;
-  width: 100%;
-  bottom: 15px;
-}
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -28,6 +22,20 @@
   position: relative;
 }
 
+.main {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
 .upper {
   width: 335px;
   height: 200px;
@@ -36,11 +44,17 @@
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 6pc;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -150%);
   padding: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.lower {
+  width: 335px;
+  height: 175px;
+  background: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .two {
@@ -66,19 +80,8 @@
   transform: translate(-50%, -50%);
 }
 
-.lower {
-  width: 335px;
-  height: 175px;
-  background: hsl(228, 56%, 26%);
-  border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -45%);
-}
-
 .header {
-  width: 55%;
+  width: 50%;
   height: 95px;
   position: absolute;
   background: #fff;
@@ -107,10 +110,6 @@
   color: #adadad;
 }
 
-.lower {
-  text-align: center;
-}
-
 p {
   font-weight: 500;
   font-size: 1.1rem;
@@ -125,7 +124,7 @@ span {
   width: 80%;
   height: 12px;
   background: hsl(229, 57%, 11%);
-  margin: 17px auto;
+  margin: 15px auto;
   border-radius: 10px;
   position: relative;
 }
@@ -154,4 +153,83 @@ span {
   position: absolute;
   left: 72%;
   z-index: 1;
+}
+
+.limit {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.limit p {
+  margin: 0;
+  display: inline;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background: url("./images/bg-desktop.png"), hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+  }
+
+  .main {
+    width: 900px;
+    height: 400px;
+
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .upper {
+    margin-right: 20px;
+  }
+
+  .lower {
+    width: 60%;
+    height: 150px;
+    transform: translateY(15px);
+    text-align: start;
+    padding-left: 30px;
+  }
+
+  .header {
+    width: 25%;
+    height: 70px;
+    padding-left: 10px;
+    transform: translate(75%, -165%);
+  }
+
+  .header::after {
+    content: "";
+    transform: translate(1px,40px);
+    width: 0;
+    height: 0;
+    border-top: 30px solid #fff;
+    border-left: 20px solid transparent;
+  }
+
+  .header h1 {
+    margin: 6px;
+  }
+
+  .header p {
+    font-size: 0.6rem;
+  }
+
+  .progressbar {
+    width: 93%;
+    margin: 17px 0;
+  }
+
+  .progress-end {
+    left: 74%;
+  }
+
+  .limit {
+    padding: 0px 20px;
+    transform: translateX(-20px);
+  }
 }
